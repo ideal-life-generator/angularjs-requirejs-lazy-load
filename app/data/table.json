@@ -1,0 +1,20 @@
+{
+  "title": "Dummy Table",
+  "users": [
+    {
+      "firstname": "Vladislav",
+      "lastname": "Tkachenko",
+      "age": "26"
+    },
+    {
+      "firstname": "Valentin",
+      "lastname": "Timchenko",
+      "age": "30"
+    },
+    {
+      "firstname": "Snegana",
+      "lastname": "Romanovich",
+      "age": "36"
+    }
+  ]
+}

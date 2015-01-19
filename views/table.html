@@ -1,0 +1,22 @@
+<header>
+  <h1>{{ title }}</h1>
+</header>
+
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users">
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.age }}</td>
+    </tr>
+  </tbody>
+</table>
