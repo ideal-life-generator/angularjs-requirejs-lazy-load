@@ -1,4 +1,4 @@
-To start server need:
+To start server you need:
  - install node.js;
  - download this repositorie;
  - go to the main folder and use command "node server".
