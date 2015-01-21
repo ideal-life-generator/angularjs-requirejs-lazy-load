@@ -4,12 +4,12 @@ define [
   application
 ) ->
 
-  application.controller "tableController", [
-    "$scope", "table"
-    , ($scope, table) ->
+  tableController = ($scope, table) ->
 
-      $scope.title = table.data.title
+    $scope.title = table.data.title
 
-      $scope.users = table.data.users
+    $scope.users = table.data.users
 
-  ]
+  tableController.$inject = [ "$scope", "table" ]
+
+  tableController

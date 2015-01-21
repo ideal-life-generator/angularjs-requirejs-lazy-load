@@ -4,12 +4,12 @@ define [
   application
 ) ->
 
-  application.controller "listController", [
-    "$scope", "list"
-    , ($scope, list) ->
+  listController = ($scope, list) ->
 
-      $scope.title = list.data.title
+    $scope.title = list.data.title
 
-      $scope.days = list.data.days
+    $scope.days = list.data.days
 
-  ]
+  listController.$inject = [ "$scope", "list" ]
+
+  listController

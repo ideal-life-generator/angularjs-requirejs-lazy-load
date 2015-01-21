@@ -2,17 +2,20 @@
   require.config({
     paths: {
       angular: "https://code.angularjs.org/1.3.9",
-      controllers: "app/controllers"
+      configs: "app/configs",
+      controllers: "app/controllers",
+      dev: "app/dev"
     },
     shim: {
       "angular/angular.min": {
         exports: "angular"
       },
-      "angular/angular-route.min": ["angular/angular.min"]
+      "angular/angular-route.min": ["angular/angular.min"],
+      "configs/routeConfig": ["dev/loadControllersAsync"]
     }
   });
 
-  require(["app/application", "app/config", "controllers/tableController", "controllers/listController", "controllers/chartController"], function() {
+  require(["app/application", "configs/routeConfig"], function() {
     return angular.element(document).ready(function() {
       return angular.bootstrap(document, ["application"]);
     });
