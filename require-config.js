@@ -9,7 +9,7 @@
         exports: "angular"
       },
       "angular/angular-route.min": ["angular/angular.min"],
-      "application": ["angular/angular-route.min"]
+      "application": ["angular/angular.min", "angular/angular-route.min"]
     }
   });
 

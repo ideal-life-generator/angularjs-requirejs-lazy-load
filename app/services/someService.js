@@ -1,8 +1,11 @@
 (function() {
-  define(["application"], function(application) {
-    return application.service("someDirective", function() {
-      return this.name = "Vlad";
-    });
+  define(["application", "services/mainService"], function(application) {
+    return application.service("someService", [
+      "mainService", function(mainService) {
+        console.log(mainService);
+        return this.name = "Vlad";
+      }
+    ]);
   });
 
 }).call(this);

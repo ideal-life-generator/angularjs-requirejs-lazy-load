@@ -1,9 +1,16 @@
 define [
   "application"
+  "services/mainService"
 ], (
   application
 ) ->
 
-  application.service "someDirective", ->
+  application.service "someService", [
+    "mainService"
+    , (mainService) ->
 
-    @name = "Vlad"
+      console.log mainService
+
+      @name = "Vlad"
+
+  ]

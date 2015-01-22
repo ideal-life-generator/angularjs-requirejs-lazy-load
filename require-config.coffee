@@ -8,12 +8,10 @@ require.config
     "angular/angular.min":
       exports: "angular"
     "angular/angular-route.min": [ "angular/angular.min" ]
-    # "modules/amdLoader": [ "angular/angular.min" ]
-    "application": [ "angular/angular-route.min" ]
+    "application": [ "angular/angular.min", "angular/angular-route.min" ]
 
 require [
   "configs/routeConfig"
-  # "services/someService"
 ], ->
 
   angular.element document
