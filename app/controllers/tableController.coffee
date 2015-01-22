@@ -1,15 +1,16 @@
 define [
-  "app/application"
+  "application"
+  "services/someService"
 ], (
   application
 ) ->
 
-  tableController = ($scope, table) ->
+  application.controller "tableController", [
+    "$scope", "table"
+    , ($scope, table) ->
+  
+      $scope.title = table.data.title
+  
+      $scope.users = table.data.users
 
-    $scope.title = table.data.title
-
-    $scope.users = table.data.users
-
-  tableController.$inject = [ "$scope", "table" ]
-
-  tableController
+  ]

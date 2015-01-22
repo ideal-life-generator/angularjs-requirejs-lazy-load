@@ -1,5 +1,5 @@
 (function() {
-  define(["app/application"], function(application) {
+  define(["application"], function(application) {
     return application.config([
       "$routeProvider", function($routeProvider) {
         return $routeProvider.when("/table", {

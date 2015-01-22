@@ -1,19 +1,19 @@
 require.config
+  baseUrl: "./app"
+
   paths:
     angular: "https://code.angularjs.org/1.3.9"
-    configs: "app/configs"
-    controllers: "app/controllers"
-    dev: "app/dev"
 
   shim:
     "angular/angular.min":
       exports: "angular"
     "angular/angular-route.min": [ "angular/angular.min" ]
-    "configs/routeConfig": [ "dev/loadControllersAsync" ]
+    # "modules/amdLoader": [ "angular/angular.min" ]
+    "application": [ "angular/angular-route.min" ]
 
 require [
-  "app/application"
   "configs/routeConfig"
+  # "services/someService"
 ], ->
 
   angular.element document

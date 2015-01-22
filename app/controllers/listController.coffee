@@ -1,15 +1,15 @@
 define [
-  "app/application"
+  "application"
 ], (
   application
 ) ->
+  
+  application.controller "listController", [
+    "$scope", "list"
+    , ($scope, list) ->
+  
+      $scope.title = list.data.title
+  
+      $scope.days = list.data.days
 
-  listController = ($scope, list) ->
-
-    $scope.title = list.data.title
-
-    $scope.days = list.data.days
-
-  listController.$inject = [ "$scope", "list" ]
-
-  listController
+  ]
